@@ -142,6 +142,39 @@
     ]
   },
   {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "collection",
+        "name": "items",
+        "label": "Items",
+        "itemModel": "accordion-item",
+        "required": false
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "summary",
+        "label": "Summary",
+        "valueType": "string",
+        "placeholder": "Enter summary",
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "name": "details",
+        "label": "Details",
+        "valueType": "string",
+        "placeholder": "Enter details",
+        "required": true
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -157,6 +190,64 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "carousel",
+    "fields": [
+      {
+        "component": "collection",
+        "name": "items",
+        "label": "Slides",
+        "itemModel": "carousel-item",
+        "required": false
+      }
+    ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Background Image",
+        "valueType": "string",
+        "placeholder": "Select/upload an image",
+        "required": true,
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "valueType": "string",
+        "label": "Slide Content",
+        "required": true,
+        "placeholder": "Heading, text, buttons/links…"
+      },
+      {
+        "component": "select",
+        "name": "align",
+        "label": "Content Alignment",
+        "options": [
+          {
+            "name": "Left",
+            "value": "left"
+          },
+          {
+            "name": "Center",
+            "value": "center"
+          },
+          {
+            "name": "Right",
+            "value": "right"
+          },
+          {
+            "name": "Justify",
+            "value": "justify"
+          }
+        ],
+        "defaultValue": "left"
       }
     ]
   },
@@ -211,6 +302,44 @@
         "name": "text",
         "value": "",
         "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "teaser",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image alt text",
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "name": "textContent_text",
+        "label": "Text",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "aem-content",
+        "name": "textContent_cta",
+        "label": "CTA",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "textContent_ctaText",
+        "label": "CTA label",
         "valueType": "string"
       }
     ]
